@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.in.c.jpg">
+    <link rel="stylesheet" href="style2.css">
+    <title>TuneMooD - My Playlists</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul >
+            <li class="logo" onclick="redirectToIndex()"> <img src="flogo.png" alt="TuneMooD"></li>
+            <li onclick="redirectToHome()"><i class="fa-solid fa-house"></i> Home</li>
+            <li onclick="redirectToPlaylist()"><i class="fa-solid fa-music"></i> MyPlaylist</li>
+            
+        </ul>
+        <ul class="list">
+
+            <li class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search any song...">
+                <button onclick="searchDeezer()">Search</button>
+            </li>
+        </ul>
+        </nav>
+    <div class="container">
+        <div class="tracks-list" id="playlisttracksList"></div>
+        <div class="minimusicplayer">
+            <div class="songcontainer">
+                <div class="songicon">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.7C9TI3lz9T0tga26O0101gHaHa&pid=Api&P=0&h=220" alt="">
+                </div>
+                <div class="songname"></div>
+            </div>
+            <div class="audio-controls"></div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToHome() {
+            window.location.href = 'home.html';
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/574400ffc8.js" crossorigin="anonymous"></script>
+    <script src="playlistscript.js"></script>
+</body>
+
+</html>

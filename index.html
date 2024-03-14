@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.in.c.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TuneMooD</title>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+        <div class="bgI">
+            <img src="mainbg.png" alt="">
+
+        </div>
+
+        <div class="content">
+
+            <h1>The Music Match Your Mood: </h1>
+            <h2>Discover Your Perfect Melody!</h2>
+            <div class="button">
+                <div class= "btn" class="getstarted" id="mybutton">get started</div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="contentBelow" id="contentBelow">
+
+        <div class="con0">
+            <h1>Welcome to TuneMooD, your ultimate music companion!
+                With TuneMooD's AI assistant, you can simply speak your music preferences and enjoy your favorite songs 
+            </h1>
+        </div>
+
+        <div class="con1">
+            <button onclick= "startListening()"><i class="fas fa-microphone"></i>Start TuneMood</button>
+        </div>
+
+        <h2>To start, say hello (be a bit loud)</h2>
+
+
+    </div>
+
+    <script>
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 1;
+
+        recognition.onresult = (event) => {
+            const command = event.results[0][0].transcript;
+            console.log('Command:', command);
+            localStorage.setItem('searchCommand', command); 
+            window.location.href = 'home.html';
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Speech recognition error:', event.error);
+        };
+
+        function startListening() {
+            recognition.start();
+
+        }
+
+    </script>
+
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

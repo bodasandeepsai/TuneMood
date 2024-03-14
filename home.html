@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.in.c.jpg">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/574400ffc8.js" crossorigin="anonymous"></script>
+    <script src="script2.js" defer></script>
+    <title>TuneMooD</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul >
+            <li class="logo" onclick="redirectToIndex()"> <img src="flogo.png" alt="TuneMooD"></li>
+            <li><i class="fa-solid fa-house"></i> Home</li>
+            <li onclick="redirectToPlaylist()"><i class="fa-solid fa-music"></i> Playlist</li>
+            
+        </ul>
+        <ul class="list">
+
+            <li class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search any song...">
+                <button onclick="searchDeezer()">Search</button>
+            </li>
+        </ul>
+        </nav>
+
+    <div class="container">
+        <div class="tracks-list" id="tracksList"></div>
+        <div class="minimusicplayer">
+            <div class="songcontainer">
+                <div class="songicon">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.7C9TI3lz9T0tga26O0101gHaHa&pid=Api&P=0&h=220" alt="">
+                </div>
+                <div class="songname"></div>
+            </div>
+            <div class="audio-controls"></div>
+            <button class="btn" onclick="addToPlaylist(tracks[0])">add to Playlist</button>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+
+            $(window).scroll(function () {
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop) {
+                    $('.container').addClass('scroll-down');
+                } else {
+                    $('.container').removeClass('scroll-down');
+                }
+                lastScrollTop = st <= 0 ? 0 : st;
+            });
+        });
+    </script>
+</body>
+
+</html>

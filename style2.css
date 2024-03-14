@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.navbar input {
+    height: 40px;
+    width: 500px;
+    margin-left: 10px;
+    background-color: rgb(137, 199, 250);
+    padding-left: 20px;
+    border: 2px solid whitesmoke;
+    border-radius: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    padding: 5px 5px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3a3a3a;
+}
+
+.container {
+    display: flex;
+    height: 84vh;
+    margin: 10px;
+
+}
+
+.tracks-list {
+    width: 60%;
+    background-color: #151515;
+    overflow-y: scroll;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 5px solid black;
+    border-radius: 40px;
+
+}
+
+.track-item {
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(150, 199, 243);
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+
+.minimusicplayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 5px rgb(150, 199, 243);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    width: 40%;
+    padding: 7px;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
+.songicon img {
+    border: 10px solid rgb(150, 199, 243);
+}
+
+.btn {
+    width: 150px;
+    color: #ffffff;
+    background-color: #2b2a2b;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+
+.navbar button {
+    margin: 10px;
+    height: 40px;
+    width: 80px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+.songicon {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.minimusicplayer .songicon img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 200px;
+}
+
+
+.songname {
+    font-size: 20px;
+    margin: 20px;
+    color: #333;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+
+.track-item {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.track-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.track-info h3 {
+    font-size: larger bolder;
+}
+
+.track-info p {
+    margin-left: 10px;
+    font-size: small;
+}
+
+
+
+
+.track-item img {
+    width: 50px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+
+
+
+.audio-player {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#audio-controls button {
+    margin: 0 10px;
+}
+
+
+
+
+#playlisttracksList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#playlisttracksList li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    background-color: rgb(184, 218, 247);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#playlisttracksList li:hover {
+    background-color: #f0f0f0;
+}
+
+.cover-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .list .search {
+        order: 3; /* Display search below the logo and menu */
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .navbar input {
+        width: 100%;
+    }
+
+    .navbar .list li {
+        margin: 5px 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .container {
+        height: auto;
+        flex-direction: column-reverse;
+        overflow: scroll;
+        /* Reverse the order of the flex items */
+    }
+
+    .tracks-list {
+        height: 700px;
+        /* Initial height for tracks-list */
+        width: 100%;
+        overflow-y: scroll;
+        /* Enable vertical scrolling */
+        transition: height 0.5s;
+        /* Smooth transition for height change */
+    }
+
+    .minimusicplayer {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+
+}
